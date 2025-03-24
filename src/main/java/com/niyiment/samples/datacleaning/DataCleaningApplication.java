@@ -1,4 +1,4 @@
-package com.niyiment.samples.data_cleaning;
+package com.niyiment.samples.datacleaning;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,5 +9,6 @@ public class DataCleaningApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DataCleaningApplication.class, args);
 	}
+
 
 }

@@ -5,7 +5,7 @@ import java.util.List;
 
 
 public record DataCleaningProgress(
-    double progressPercentage,
+    Double progressPercentage,
     String currentTask,
     List<String> completedTasks
 ) {

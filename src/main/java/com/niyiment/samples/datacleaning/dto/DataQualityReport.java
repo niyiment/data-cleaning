@@ -8,7 +8,7 @@ import java.util.Map;
 
 @Builder
 public record DataQualityReport(
-        int totalRecords, int processedRecords,
+        Integer totalRecords, Integer processedRecords,
         Map<String, Long> missingValuesCount,
         Map<String, Integer> uniqueValuesCount
 ) {

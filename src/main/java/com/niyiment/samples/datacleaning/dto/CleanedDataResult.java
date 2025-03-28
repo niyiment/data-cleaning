@@ -10,6 +10,7 @@ import java.util.Map;
 public record CleanedDataResult(
         List<Map<String, Object>> cleanedData,
         DataQualityReport dataQualityReport,
-        List<String> columns
+        List<String> columns,
+        List<String> validationErrors
 ) {
 }

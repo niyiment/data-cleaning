@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+
+spring:
+  application:
+    name: Data Cleaning Application
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+
+cleaning:
+  pipeline:
+    steps:
+      - removeSpecialCharacters
+      - normalizeWhitespace
+      - handleMissingValues
+      - removeDuplicates
+      - typeInference
+      - dataValidation
+      - outlierDetection
+      - categoricalStandardization
+
+  type-inference:
+    identifier-patterns:
+      - ".*id.*"
+      - ".*number.*"
+      - ".*code.*"
+      - ".*account_number.*"
+    date-column-keywords:
+      - "date"
+      - "dob"

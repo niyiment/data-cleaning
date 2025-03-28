@@ -10,7 +10,9 @@ import java.util.Map;
 public record DataQualityReport(
         Integer totalRecords, Integer processedRecords,
         Map<String, Long> missingValuesCount,
-        Map<String, Integer> uniqueValuesCount
+        Map<String, Integer> uniqueValuesCount,
+        Map<String, Map<String, Object>> numericStats,
+        Map<String, String> columnTypes
 ) {
 
 }
